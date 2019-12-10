@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700,300);
+
+body {
+	padding: 0px;
+	margin: 0px;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;
+}
+.clear:after {
+	content: "";
+	visibility: hidden;
+	clear: both;
+	display: block;
+	height: 0px;
+}
+.simple-gallery-viewer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+.simple-gallery-record {
+	min-width: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+	box-sizing: border-box;
+	position: absolute;
+}
+.simple-gallery-record.active {
+	display: block;
+}
+.simple-gallery-record-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.simple-gallery-record-frost-image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 3% 40% 3% 3%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-clip: content-box;
+	box-sizing: border-box;
+    filter: blur(8px);
+	opacity: 0;
+	transition: opacity .75s ease 0s, padding .75s ease 0s;
+}
+.simple-gallery-record.reveal .simple-gallery-record-frost-image {
+	opacity: 1;
+	padding: 3% 3% 3% 40%;
+}
+.simple-gallery-record-info {
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	font: 400 16px/1.5em 'Raleway', sans-serif;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, .30);
+	/*padding: 3% 40% 3% 3%;*/
+	background: rgba(255, 255, 255, .6);
+	background-clip: content-box;
+	/*position: relative;*/
+	position: absolute;
+	bottom: 0;
+	max-height: 90px;
+	box-sizing: border-box;
+	/*opacity: 0;
+	transition: opacity .75s ease 0s, padding .75s ease 0s;*/
+}
+.simple-gallery-record.reveal .simple-gallery-record-info {
+	opacity: 1;
+	/*padding: 3% 3% 3% 40%;*/
+}
+.simple-gallery-record-info-inner {
+	height: 100%;
+	padding: 30px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.simple-gallery-record-info .simple-gallery-record-header {
+	padding: 0px 0px 20px;
+	font: 700 20px/1.5em 'Raleway', sans-serif;
+	text-transform: uppercase;
+}
+.simple-gallery-record-info .simple-gallery-record-caption {
+	padding: 0px 0px 20px;
+}
+.simple-gallery-record-info .simple-gallery-record-caption ul,
+.simple-gallery-record-info .simple-gallery-record-caption ol {
+	padding: 0px 0px 20px 18px;
+	margin: 0px;
+}
+.simple-gallery-record-link:after {
+	content: "";
+	visibility: hidden;
+	clear: both;
+	display: block;
+	height: 0px;
+}
+.simple-gallery-record-info a {
+	color: #FFF;
+	float: right;
+	text-decoration: none;
+}
+.simple-gallery-record-info a:hover {
+	text-decoration: underline;
+}
+.simple-gallery-bullets {
+	position: absolute;
+	top: calc(3% - 7px);
+	right: 3%;
+	z-index: 5;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.simple-gallery-bullet {
+	width: 14px;
+	height: 14px;
+	margin: 0px 0px 0px 10px;
+	float: left;
+}
+.simple-gallery-bullet-btn {
+	width: 12px;
+	height: 12px;
+	background: #FFF;
+	border: solid 1px #FFF;
+	padding: 0px;
+	margin: 0px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .20);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all .3s ease 0s;
+}
+.simple-gallery-bullet-btn:hover {
+	transform: scale(1.2);
+}
+.simple-gallery-bullet-btn.active {
+	background: none;
+	transform: scale(1.2);
+}
+
+/* 768+ */
+@media (max-width: 1023px) {
+	.simple-gallery-record-info-inner {
+		padding: 20px;
+	}
+	.simple-gallery-record-frost-image,
+	.simple-gallery-record-info {
+		padding: 42% 3% 3% 3%;
+	}
+	.simple-gallery-record.reveal .simple-gallery-record-frost-image,
+	.simple-gallery-record.reveal .simple-gallery-record-info {
+		padding: 5% 3% 3% 3%;
+	}
+	.simple-gallery-bullets {
+		top: calc(5% - 7px);
+	}
+}
+
+/* 480+ */
+@media (max-width: 639px) {
+	#gallery-container:before {
+		padding-top: 65%;
+	}
+	.simple-gallery-bullets {
+		display: none;
+	}
+	.simple-gallery-record-frost-image,
+	.simple-gallery-record-info {
+		padding: 65% 0 0 0;
+	}
+	.simple-gallery-record.reveal .simple-gallery-record-frost-image,
+	.simple-gallery-record.reveal .simple-gallery-record-info {
+		padding: 0;
+	}
+}
+
+/* New code */
+.sliders-next{
+	position: absolute;
+	top: calc(50% - 22px);
+	width: 27px;
+	height: 44px;
+	right: 3%;
+	background-color: red;
+}
+
+.sliders-prev{
+	position: absolute;
+	top: calc(50% - 22px);
+	width: 27px;
+	height: 44px;
+	left: 3%;
+	background-color: red;
+}
